@@ -12,10 +12,29 @@ body {
     z-index: 1;
 }
 
-.instructions {
+.instructions-box {
     font-size: 18px;
-    margin-right: 25.5em;
     color: white;
+    width: 800px;
+    height: 200px;
+    margin-top: 1.5em;
+    margin-right: 27em;
+    float: right;
+}
+
+.form-container {
+    margin-left: .5em;
+    color: black;   
+    display: block;
+}
+
+#show-instructions, #hide-instructions {
+    height: 2em;
+    margin-left: 15em;
+}
+
+#show, #hide {
+    
 }
 
 .ryu {
@@ -146,6 +165,4 @@ body {
     outline: red 1px solid;
 } */
 
-.instructions {
-    float: right;
-}
+

@@ -29,6 +29,8 @@ function power(evtData) {
             });
 }
 
+$("#show-instructions").hide();
+
 $(document).ready(function(){
     
     /*Good Ryu basic functionality*/
@@ -75,8 +77,8 @@ $(document).ready(function(){
             $('.ryu-throwing').hide();
             $('.hadouken').hide();
         }; 
-        if ( event.keyCode == 13 ) {
-            $('.hulk-ryu-cool').show(); // code to show Hulk Ryu doing cool pose when hitting "Enter" on keyboard
+        if ( event.keyCode == 80 ) {
+            $('.hulk-ryu-cool').show(); // code to show Hulk Ryu doing cool pose when hitting "p" on keyboard
             $('.hulk-ryu-still').hide();
             $('.hulk-ryu-ready').hide();
             $('.hulk-ryu-throwing').hide();
@@ -93,5 +95,19 @@ $(document).ready(function(){
             $('.hulk-ryu-throwing').hide();
             $('.hulk-hadouken').hide();
             $('.hulk-ryu-still').show();
+    });
+    
+    $("#show-instructions").submit(function() {
+        event.preventDefault();
+        $("#show-instructions").hide();
+        $(".instructions").show();
+        $("#hide-instructions").show();
+    });
+    
+    $("#hide-instructions").submit(function() {
+        event.preventDefault();
+        $(".instructions").hide();
+        $("#hide-instructions").hide();
+        $("#show-instructions").show();
     });
 });
